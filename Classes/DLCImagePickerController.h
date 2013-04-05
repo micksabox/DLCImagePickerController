@@ -19,6 +19,10 @@
 - (void)imagePickerControllerDidCancel:(DLCImagePickerController *)picker;
 @end
 
+/*
+ Abstract superclass for capturing photo with option of filters and options of live video feed or static image from library.
+ */
+
 @interface DLCImagePickerController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate> {
 //    GPUImageStillCamera *stillCamera;
 //    GPUImageOutput<GPUImageInput> *filter;
