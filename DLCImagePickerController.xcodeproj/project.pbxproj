@@ -58,9 +58,6 @@
 		6A5530B615E486E300019CC9 /* 9@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A5530B415E486E300019CC9 /* 9@2x.jpg */; };
 		6A5530B915E486E900019CC9 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A5530B715E486E900019CC9 /* 10.jpg */; };
 		6A5530BA15E486E900019CC9 /* 10@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6A5530B815E486E900019CC9 /* 10@2x.jpg */; };
-		6A5BBDA815E2214B00B1B485 /* 02.acv in Resources */ = {isa = PBXBuildFile; fileRef = 6A5BBDA515E2214B00B1B485 /* 02.acv */; };
-		6A5BBDA915E2214B00B1B485 /* 06.acv in Resources */ = {isa = PBXBuildFile; fileRef = 6A5BBDA615E2214B00B1B485 /* 06.acv */; };
-		6A5BBDAA15E2214B00B1B485 /* 17.acv in Resources */ = {isa = PBXBuildFile; fileRef = 6A5BBDA715E2214B00B1B485 /* 17.acv */; };
 		6A5D9A1515E0152D001FAD14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5D9A1415E0152D001FAD14 /* UIKit.framework */; };
 		6A5D9A1715E0152D001FAD14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5D9A1615E0152D001FAD14 /* Foundation.framework */; };
 		6A5D9A1915E0152D001FAD14 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5D9A1815E0152D001FAD14 /* CoreGraphics.framework */; };
@@ -83,11 +80,7 @@
 		6A5D9AA615E02527001FAD14 /* photo_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D9A9A15E02527001FAD14 /* photo_bar.png */; };
 		6A5D9AA715E02527001FAD14 /* photo_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D9A9B15E02527001FAD14 /* photo_bar@2x.png */; };
 		6A5D9AAA15E0259A001FAD14 /* DLCImagePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D9AA915E0259A001FAD14 /* DLCImagePicker.xib */; };
-		7D0E5AB315E203FA009D19C9 /* purple-green.acv in Resources */ = {isa = PBXBuildFile; fileRef = 7D0E5AB115E203FA009D19C9 /* purple-green.acv */; };
-		7D0E5AB415E203FA009D19C9 /* yellow-red.acv in Resources */ = {isa = PBXBuildFile; fileRef = 7D0E5AB215E203FA009D19C9 /* yellow-red.acv */; };
-		7D1E64B915E1FA2F005A9E09 /* crossprocess.acv in Resources */ = {isa = PBXBuildFile; fileRef = 7D1E64B715E1FA2F005A9E09 /* crossprocess.acv */; };
 		7DEB4DC615E063420078BFAD /* sample1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB4DC515E063420078BFAD /* sample1.jpg */; };
-		7DFAE1BA15E22A9F00C8236F /* aqua.acv in Resources */ = {isa = PBXBuildFile; fileRef = 7DFAE1B915E22A9F00C8236F /* aqua.acv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,9 +136,6 @@
 		6A5530B415E486E300019CC9 /* 9@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "9@2x.jpg"; sourceTree = "<group>"; };
 		6A5530B715E486E900019CC9 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		6A5530B815E486E900019CC9 /* 10@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "10@2x.jpg"; sourceTree = "<group>"; };
-		6A5BBDA515E2214B00B1B485 /* 02.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = 02.acv; path = Filters/02.acv; sourceTree = "<group>"; };
-		6A5BBDA615E2214B00B1B485 /* 06.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = 06.acv; path = Filters/06.acv; sourceTree = "<group>"; };
-		6A5BBDA715E2214B00B1B485 /* 17.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = 17.acv; path = Filters/17.acv; sourceTree = "<group>"; };
 		6A5D9A1015E0152D001FAD14 /* DLCImagePickerController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLCImagePickerController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5D9A1415E0152D001FAD14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6A5D9A1615E0152D001FAD14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -174,11 +164,7 @@
 		6A5D9A9A15E02527001FAD14 /* photo_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_bar.png; sourceTree = "<group>"; };
 		6A5D9A9B15E02527001FAD14 /* photo_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_bar@2x.png"; sourceTree = "<group>"; };
 		6A5D9AA915E0259A001FAD14 /* DLCImagePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLCImagePicker.xib; sourceTree = "<group>"; };
-		7D0E5AB115E203FA009D19C9 /* purple-green.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "purple-green.acv"; path = "Filters/purple-green.acv"; sourceTree = "<group>"; };
-		7D0E5AB215E203FA009D19C9 /* yellow-red.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "yellow-red.acv"; path = "Filters/yellow-red.acv"; sourceTree = "<group>"; };
-		7D1E64B715E1FA2F005A9E09 /* crossprocess.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = crossprocess.acv; path = Filters/crossprocess.acv; sourceTree = "<group>"; };
 		7DEB4DC515E063420078BFAD /* sample1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample1.jpg; path = Samples/sample1.jpg; sourceTree = "<group>"; };
-		7DFAE1B915E22A9F00C8236F /* aqua.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = aqua.acv; path = Filters/aqua.acv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,7 +350,6 @@
 		6A5D9AA815E0259A001FAD14 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7D1E64B615E1F8D9005A9E09 /* Curves */,
 				6A5D9AA915E0259A001FAD14 /* DLCImagePicker.xib */,
 			);
 			path = Resources;
@@ -375,20 +360,6 @@
 			children = (
 			);
 			name = Filters;
-			sourceTree = "<group>";
-		};
-		7D1E64B615E1F8D9005A9E09 /* Curves */ = {
-			isa = PBXGroup;
-			children = (
-				7DFAE1B915E22A9F00C8236F /* aqua.acv */,
-				6A5BBDA515E2214B00B1B485 /* 02.acv */,
-				6A5BBDA615E2214B00B1B485 /* 06.acv */,
-				6A5BBDA715E2214B00B1B485 /* 17.acv */,
-				7D0E5AB115E203FA009D19C9 /* purple-green.acv */,
-				7D0E5AB215E203FA009D19C9 /* yellow-red.acv */,
-				7D1E64B715E1FA2F005A9E09 /* crossprocess.acv */,
-			);
-			name = Curves;
 			sourceTree = "<group>";
 		};
 		7D643C2E15E05FBF0035A22D /* Samples */ = {
@@ -460,13 +431,6 @@
 				6A5D9AA715E02527001FAD14 /* photo_bar@2x.png in Resources */,
 				6A5D9AAA15E0259A001FAD14 /* DLCImagePicker.xib in Resources */,
 				7DEB4DC615E063420078BFAD /* sample1.jpg in Resources */,
-				7D1E64B915E1FA2F005A9E09 /* crossprocess.acv in Resources */,
-				7D0E5AB315E203FA009D19C9 /* purple-green.acv in Resources */,
-				7D0E5AB415E203FA009D19C9 /* yellow-red.acv in Resources */,
-				6A5BBDA815E2214B00B1B485 /* 02.acv in Resources */,
-				6A5BBDA915E2214B00B1B485 /* 06.acv in Resources */,
-				6A5BBDAA15E2214B00B1B485 /* 17.acv in Resources */,
-				7DFAE1BA15E22A9F00C8236F /* aqua.acv in Resources */,
 				6A49CEA715E345070098304F /* blackframe.png in Resources */,
 				6A49CED815E459B00098304F /* filter-close.png in Resources */,
 				6A49CED915E459B00098304F /* filter-close@2x.png in Resources */,
