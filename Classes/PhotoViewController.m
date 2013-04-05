@@ -29,7 +29,7 @@
 - (void)loadView 
 {
 	CGRect mainScreenFrame = [[UIScreen mainScreen] bounds];
-	UIView *primaryView = [[GPUImageView alloc] initWithFrame:mainScreenFrame];
+	UIView *primaryView = [[UIView alloc] initWithFrame:mainScreenFrame];
     
     showPickerButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     showPickerButton.frame = CGRectMake(round(mainScreenFrame.size.width / 2.0 - 150.0 / 2.0), mainScreenFrame.size.height - 90.0, 150.0, 40.0);

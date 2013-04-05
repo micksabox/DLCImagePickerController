@@ -72,7 +72,6 @@
 		6A5D9A3015E01598001FAD14 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5D9A2F15E01598001FAD14 /* QuartzCore.framework */; };
 		6A5D9A3215E015A1001FAD14 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5D9A3115E015A1001FAD14 /* OpenGLES.framework */; };
 		6A5D9A3415E015B3001FAD14 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5D9A3315E015B3001FAD14 /* AVFoundation.framework */; };
-		6A5D9A5715E01BD7001FAD14 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5D9A5215E01B72001FAD14 /* libGPUImage.a */; };
 		6A5D9A5915E01DA4001FAD14 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5D9A5815E01DA4001FAD14 /* AssetsLibrary.framework */; };
 		6A5D9A8815E02429001FAD14 /* DLCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5D9A8715E02429001FAD14 /* DLCImagePickerController.m */; };
 		6A5D9A8B15E02504001FAD14 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5D9A8A15E02504001FAD14 /* PhotoViewController.m */; };
@@ -86,35 +85,10 @@
 		6A5D9AAA15E0259A001FAD14 /* DLCImagePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D9AA915E0259A001FAD14 /* DLCImagePicker.xib */; };
 		7D0E5AB315E203FA009D19C9 /* purple-green.acv in Resources */ = {isa = PBXBuildFile; fileRef = 7D0E5AB115E203FA009D19C9 /* purple-green.acv */; };
 		7D0E5AB415E203FA009D19C9 /* yellow-red.acv in Resources */ = {isa = PBXBuildFile; fileRef = 7D0E5AB215E203FA009D19C9 /* yellow-red.acv */; };
-		7D0E5AB815E209AD009D19C9 /* GrayscaleContrastFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0E5AB715E209AD009D19C9 /* GrayscaleContrastFilter.m */; };
 		7D1E64B915E1FA2F005A9E09 /* crossprocess.acv in Resources */ = {isa = PBXBuildFile; fileRef = 7D1E64B715E1FA2F005A9E09 /* crossprocess.acv */; };
 		7DEB4DC615E063420078BFAD /* sample1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB4DC515E063420078BFAD /* sample1.jpg */; };
 		7DFAE1BA15E22A9F00C8236F /* aqua.acv in Resources */ = {isa = PBXBuildFile; fileRef = 7DFAE1B915E22A9F00C8236F /* aqua.acv */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6A5D9A5115E01B72001FAD14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A5D9A4815E01B72001FAD14 /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
-		6A5D9A5315E01B72001FAD14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A5D9A4815E01B72001FAD14 /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
-			remoteInfo = GPUImageTests;
-		};
-		6A5D9A5515E01BC2001FAD14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6A5D9A4815E01B72001FAD14 /* GPUImage.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6A0D09FF165A1CBE0028E1B6 /* BlurOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurOverlayView.h; sourceTree = "<group>"; };
@@ -187,7 +161,6 @@
 		6A5D9A2F15E01598001FAD14 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6A5D9A3115E015A1001FAD14 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6A5D9A3315E015B3001FAD14 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		6A5D9A4815E01B72001FAD14 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		6A5D9A5815E01DA4001FAD14 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		6A5D9A8615E02429001FAD14 /* DLCImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCImagePickerController.h; sourceTree = "<group>"; };
 		6A5D9A8715E02429001FAD14 /* DLCImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCImagePickerController.m; sourceTree = "<group>"; };
@@ -203,8 +176,6 @@
 		6A5D9AA915E0259A001FAD14 /* DLCImagePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLCImagePicker.xib; sourceTree = "<group>"; };
 		7D0E5AB115E203FA009D19C9 /* purple-green.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "purple-green.acv"; path = "Filters/purple-green.acv"; sourceTree = "<group>"; };
 		7D0E5AB215E203FA009D19C9 /* yellow-red.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = "yellow-red.acv"; path = "Filters/yellow-red.acv"; sourceTree = "<group>"; };
-		7D0E5AB615E2099C009D19C9 /* GrayscaleContrastFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrayscaleContrastFilter.h; sourceTree = "<group>"; };
-		7D0E5AB715E209AD009D19C9 /* GrayscaleContrastFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrayscaleContrastFilter.m; sourceTree = "<group>"; };
 		7D1E64B715E1FA2F005A9E09 /* crossprocess.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = crossprocess.acv; path = Filters/crossprocess.acv; sourceTree = "<group>"; };
 		7DEB4DC515E063420078BFAD /* sample1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample1.jpg; path = Samples/sample1.jpg; sourceTree = "<group>"; };
 		7DFAE1B915E22A9F00C8236F /* aqua.acv */ = {isa = PBXFileReference; lastKnownFileType = file; name = aqua.acv; path = Filters/aqua.acv; sourceTree = "<group>"; };
@@ -216,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5D9A5915E01DA4001FAD14 /* AssetsLibrary.framework in Frameworks */,
-				6A5D9A5715E01BD7001FAD14 /* libGPUImage.a in Frameworks */,
 				6A5D9A3415E015B3001FAD14 /* AVFoundation.framework in Frameworks */,
 				6A5D9A3215E015A1001FAD14 /* OpenGLES.framework in Frameworks */,
 				6A5D9A3015E01598001FAD14 /* QuartzCore.framework in Frameworks */,
@@ -282,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				6A5D9A5815E01DA4001FAD14 /* AssetsLibrary.framework */,
-				6A5D9A4815E01B72001FAD14 /* GPUImage.xcodeproj */,
 				6A5D9A3315E015B3001FAD14 /* AVFoundation.framework */,
 				6A5D9A3115E015A1001FAD14 /* OpenGLES.framework */,
 				6A5D9A2F15E01598001FAD14 /* QuartzCore.framework */,
@@ -315,15 +284,6 @@
 				6A5D9A2215E0152D001FAD14 /* DLCImagePickerController-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6A5D9A4915E01B72001FAD14 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6A5D9A5215E01B72001FAD14 /* libGPUImage.a */,
-				6A5D9A5415E01B72001FAD14 /* GPUImageTests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6A5D9A8515E02429001FAD14 /* Classes */ = {
@@ -413,8 +373,6 @@
 		7D0E5AB515E20987009D19C9 /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				7D0E5AB615E2099C009D19C9 /* GrayscaleContrastFilter.h */,
-				7D0E5AB715E209AD009D19C9 /* GrayscaleContrastFilter.m */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -455,7 +413,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6A5D9A5615E01BC2001FAD14 /* PBXTargetDependency */,
 			);
 			name = DLCImagePickerController;
 			productName = DLCImagePickerController;
@@ -481,35 +438,12 @@
 			mainGroup = 6A5D9A0515E0152D001FAD14;
 			productRefGroup = 6A5D9A1115E0152D001FAD14 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6A5D9A4915E01B72001FAD14 /* Products */;
-					ProjectRef = 6A5D9A4815E01B72001FAD14 /* GPUImage.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6A5D9A0F15E0152D001FAD14 /* DLCImagePickerController */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		6A5D9A5215E01B72001FAD14 /* libGPUImage.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGPUImage.a;
-			remoteRef = 6A5D9A5115E01B72001FAD14 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6A5D9A5415E01B72001FAD14 /* GPUImageTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GPUImageTests.octest;
-			remoteRef = 6A5D9A5315E01B72001FAD14 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6A5D9A0E15E0152D001FAD14 /* Resources */ = {
@@ -597,20 +531,11 @@
 				6A5D9A2515E0152E001FAD14 /* AppDelegate.m in Sources */,
 				6A5D9A8815E02429001FAD14 /* DLCImagePickerController.m in Sources */,
 				6A5D9A8B15E02504001FAD14 /* PhotoViewController.m in Sources */,
-				7D0E5AB815E209AD009D19C9 /* GrayscaleContrastFilter.m in Sources */,
 				6A0D0A01165A1CBE0028E1B6 /* BlurOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6A5D9A5615E01BC2001FAD14 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GPUImage;
-			targetProxy = 6A5D9A5515E01BC2001FAD14 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6A5D9A1D15E0152D001FAD14 /* InfoPlist.strings */ = {

@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GPUImage.h"
+//#import "GPUImage.h"
 #import "BlurOverlayView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @class DLCImagePickerController;
 
@@ -19,16 +20,16 @@
 @end
 
 @interface DLCImagePickerController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate> {
-    GPUImageStillCamera *stillCamera;
-    GPUImageOutput<GPUImageInput> *filter;
-    GPUImageOutput<GPUImageInput> *blurFilter;
-    GPUImageCropFilter *cropFilter;
-    GPUImagePicture *staticPicture;
+//    GPUImageStillCamera *stillCamera;
+//    GPUImageOutput<GPUImageInput> *filter;
+//    GPUImageOutput<GPUImageInput> *blurFilter;
+//    GPUImageCropFilter *cropFilter;
+//    GPUImagePicture *staticPicture;
     UIImageOrientation staticPictureOriginalOrientation;
     
 }
 
-@property (nonatomic, weak) IBOutlet GPUImageView *imageView;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @property (nonatomic, weak) id <DLCImagePickerDelegate> delegate;
 @property (nonatomic, weak) IBOutlet UIButton *photoCaptureButton;
 @property (nonatomic, weak) IBOutlet UIButton *cancelButton;
