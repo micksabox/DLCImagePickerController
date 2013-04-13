@@ -48,7 +48,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="156513520"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor" id="950787088">
+						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MAA</bytes>
 						</object>
@@ -82,7 +82,7 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<bool key="IBUIBounces">NO</bool>
+						<bool key="IBUIAlwaysBounceHorizontal">YES</bool>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
 					</object>
@@ -246,7 +246,7 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="187956305"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
+						<object class="NSColor" key="IBUIBackgroundColor" id="309010286">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC4zMzMzMzMzMzMzAA</bytes>
 						</object>
@@ -370,7 +370,7 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="588006416"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUIBackgroundColor" ref="950787088"/>
+				<reference key="IBUIBackgroundColor" ref="309010286"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIPinchGestureRecognizer" id="764651516"/>
@@ -786,6 +786,7 @@
 						<string key="handlePinch:">UIPinchGestureRecognizer</string>
 						<string key="handleTapToFocus:">UITapGestureRecognizer</string>
 						<string key="retakePhoto:">UIButton</string>
+						<string key="switchCamera">id</string>
 						<string key="switchToLibrary:">id</string>
 						<string key="takePhoto:">id</string>
 						<string key="toggleBlur:">UIButton</string>
@@ -812,6 +813,10 @@
 						<object class="IBActionInfo" key="retakePhoto:">
 							<string key="name">retakePhoto:</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBActionInfo" key="switchCamera">
+							<string key="name">switchCamera</string>
+							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="switchToLibrary:">
 							<string key="name">switchToLibrary:</string>

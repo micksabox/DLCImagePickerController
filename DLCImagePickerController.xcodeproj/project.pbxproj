@@ -81,6 +81,10 @@
 		6A5D9AA715E02527001FAD14 /* photo_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D9A9B15E02527001FAD14 /* photo_bar@2x.png */; };
 		6A5D9AAA15E0259A001FAD14 /* DLCImagePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A5D9AA915E0259A001FAD14 /* DLCImagePicker.xib */; };
 		7DEB4DC615E063420078BFAD /* sample1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7DEB4DC515E063420078BFAD /* sample1.jpg */; };
+		EA3C23DA170E7DC8004E53F1 /* CIFilterImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3C23D9170E7DC8004E53F1 /* CIFilterImagePickerController.m */; };
+		EA3C23DC170E7FD5004E53F1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3C23DB170E7FD5004E53F1 /* CoreImage.framework */; };
+		EA3C23DF17138611004E53F1 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3C23DE17138611004E53F1 /* UIColor+Expanded.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EAC094A417164EAC00BAD158 /* AVCamUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC094A317164EAC00BAD158 /* AVCamUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -165,6 +169,13 @@
 		6A5D9A9B15E02527001FAD14 /* photo_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_bar@2x.png"; sourceTree = "<group>"; };
 		6A5D9AA915E0259A001FAD14 /* DLCImagePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLCImagePicker.xib; sourceTree = "<group>"; };
 		7DEB4DC515E063420078BFAD /* sample1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sample1.jpg; path = Samples/sample1.jpg; sourceTree = "<group>"; };
+		EA3C23D8170E7DC8004E53F1 /* CIFilterImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIFilterImagePickerController.h; sourceTree = "<group>"; };
+		EA3C23D9170E7DC8004E53F1 /* CIFilterImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIFilterImagePickerController.m; sourceTree = "<group>"; };
+		EA3C23DB170E7FD5004E53F1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		EA3C23DD17138611004E53F1 /* UIColor+Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		EA3C23DE17138611004E53F1 /* UIColor+Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
+		EAC094A217164EAC00BAD158 /* AVCamUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamUtilities.h; sourceTree = "<group>"; };
+		EAC094A317164EAC00BAD158 /* AVCamUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3C23DC170E7FD5004E53F1 /* CoreImage.framework in Frameworks */,
 				6A5D9A5915E01DA4001FAD14 /* AssetsLibrary.framework in Frameworks */,
 				6A5D9A3415E015B3001FAD14 /* AVFoundation.framework in Frameworks */,
 				6A5D9A3215E015A1001FAD14 /* OpenGLES.framework in Frameworks */,
@@ -217,6 +229,7 @@
 		6A5D9A0515E0152D001FAD14 = {
 			isa = PBXGroup;
 			children = (
+				EA3C23DB170E7FD5004E53F1 /* CoreImage.framework */,
 				6A5D9A8515E02429001FAD14 /* Classes */,
 				6A5D9AA815E0259A001FAD14 /* Resources */,
 				6A5D9A8C15E02527001FAD14 /* Images */,
@@ -264,6 +277,10 @@
 		6A5D9A1B15E0152D001FAD14 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EAC094A217164EAC00BAD158 /* AVCamUtilities.h */,
+				EAC094A317164EAC00BAD158 /* AVCamUtilities.m */,
+				EA3C23DD17138611004E53F1 /* UIColor+Expanded.h */,
+				EA3C23DE17138611004E53F1 /* UIColor+Expanded.m */,
 				6A5D9A1C15E0152D001FAD14 /* DLCImagePickerController-Info.plist */,
 				6A5D9A1D15E0152D001FAD14 /* InfoPlist.strings */,
 				6A5D9A2015E0152D001FAD14 /* main.m */,
@@ -277,11 +294,9 @@
 			children = (
 				6A0D09FF165A1CBE0028E1B6 /* BlurOverlayView.h */,
 				6A0D0A00165A1CBE0028E1B6 /* BlurOverlayView.m */,
-				7D0E5AB515E20987009D19C9 /* Filters */,
 				6A5D9A8915E02504001FAD14 /* PhotoViewController.h */,
 				6A5D9A8A15E02504001FAD14 /* PhotoViewController.m */,
-				6A5D9A8615E02429001FAD14 /* DLCImagePickerController.h */,
-				6A5D9A8715E02429001FAD14 /* DLCImagePickerController.m */,
+				EA3C23D6170E7D52004E53F1 /* ImagePickerAbstract */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -355,19 +370,31 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7D0E5AB515E20987009D19C9 /* Filters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Filters;
-			sourceTree = "<group>";
-		};
 		7D643C2E15E05FBF0035A22D /* Samples */ = {
 			isa = PBXGroup;
 			children = (
 				7DEB4DC515E063420078BFAD /* sample1.jpg */,
 			);
 			name = Samples;
+			sourceTree = "<group>";
+		};
+		EA3C23D6170E7D52004E53F1 /* ImagePickerAbstract */ = {
+			isa = PBXGroup;
+			children = (
+				6A5D9A8615E02429001FAD14 /* DLCImagePickerController.h */,
+				6A5D9A8715E02429001FAD14 /* DLCImagePickerController.m */,
+				EA3C23D7170E7D5F004E53F1 /* CIFilterImagePickerController */,
+			);
+			name = ImagePickerAbstract;
+			sourceTree = "<group>";
+		};
+		EA3C23D7170E7D5F004E53F1 /* CIFilterImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				EA3C23D8170E7DC8004E53F1 /* CIFilterImagePickerController.h */,
+				EA3C23D9170E7DC8004E53F1 /* CIFilterImagePickerController.m */,
+			);
+			name = CIFilterImagePickerController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +523,9 @@
 				6A5D9A8815E02429001FAD14 /* DLCImagePickerController.m in Sources */,
 				6A5D9A8B15E02504001FAD14 /* PhotoViewController.m in Sources */,
 				6A0D0A01165A1CBE0028E1B6 /* BlurOverlayView.m in Sources */,
+				EA3C23DA170E7DC8004E53F1 /* CIFilterImagePickerController.m in Sources */,
+				EA3C23DF17138611004E53F1 /* UIColor+Expanded.m in Sources */,
+				EAC094A417164EAC00BAD158 /* AVCamUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

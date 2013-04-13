@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DLCImagePickerController.h"
+#import "CIFilterImagePickerController.h"
 
 @interface PhotoViewController : UIViewController<DLCImagePickerDelegate>
 

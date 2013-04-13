@@ -44,7 +44,7 @@
 }
 
 -(void) takePhoto:(id)sender{
-    DLCImagePickerController *picker = [[DLCImagePickerController alloc] init];
+    CIFilterImagePickerController *picker = [[CIFilterImagePickerController alloc] init];
     picker.delegate = self;
     [self presentModalViewController:picker animated:YES];
 }
@@ -60,6 +60,7 @@
     
     if (info) {
         ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+        
         [library writeImageDataToSavedPhotosAlbum:[info objectForKey:@"data"] metadata:nil completionBlock:^(NSURL *assetURL, NSError *error)
          {
              if (error) {

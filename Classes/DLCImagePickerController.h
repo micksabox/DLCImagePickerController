@@ -54,4 +54,16 @@
 
 @property (nonatomic, assign) CGFloat outputJPEGQuality;
 
+#pragma mark - Subclass These
+-(void) loadFilters;
+-(void) setUpCamera;
+-(void) prepareFilter;
+-(IBAction) switchCamera;
+-(void) prepareForCapture;
+-(void)captureImage;
+-(void) removeAllTargets;
+-(IBAction) retakePhoto:(UIButton *)button;
+-(void) prepareLiveFilter;
+-(void) prepareStaticFilter;
+-(void) showFilters;
 @end

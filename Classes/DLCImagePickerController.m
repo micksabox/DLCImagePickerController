@@ -163,6 +163,8 @@
         }
     }
     
+//    isStatic = NO;
+    
     [sender setSelected:YES];
     [self removeAllTargets];
     
@@ -421,21 +423,28 @@
 //        [staticPicture processImage];
 //        
 //        UIImage *currentFilteredVideoFrame = [processUpTo imageFromCurrentlyProcessedOutputWithOrientation:staticPictureOriginalOrientation];
-//
-//        NSDictionary *info = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                              UIImageJPEGRepresentation(currentFilteredVideoFrame, self.outputJPEGQuality), @"data", nil];
-//        [self.delegate imagePickerController:self didFinishPickingMediaWithInfo:info];
+
+        UIImage * currentImage = self.imageView.image;
+        
+        NSDictionary *info = [[NSDictionary alloc] initWithObjectsAndKeys:
+                              UIImageJPEGRepresentation(currentImage, self.outputJPEGQuality), @"data", nil];
+        
+        [self.delegate imagePickerController:self didFinishPickingMediaWithInfo:info];
     }
 }
 
 -(IBAction) retakePhoto:(UIButton *)button {
     [self.retakeButton setHidden:YES];
     [self.libraryToggleButton setHidden:NO];
-//    staticPicture = nil;
+
     staticPictureOriginalOrientation = UIImageOrientationUp;
     isStatic = NO;
     [self removeAllTargets];
 //    [stillCamera startCameraCapture];
+    
+    
+    
+    
     [self.cameraToggleButton setEnabled:YES];
 //    
 //    if([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]
@@ -687,7 +696,9 @@
     }
     
     if (outputImage) {
-//        staticPicture = [[GPUImagePicture alloc] initWithImage:outputImage smoothlyScaleOutput:YES];
+        
+        self.imageView.image = outputImage;
+        
         staticPictureOriginalOrientation = outputImage.imageOrientation;
         isStatic = YES;
         [self dismissViewControllerAnimated:YES completion:nil];
