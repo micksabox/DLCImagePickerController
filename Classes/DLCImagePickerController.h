@@ -54,6 +54,8 @@
 
 @property (nonatomic, assign) CGFloat outputJPEGQuality;
 
+@property (nonatomic, assign) int selectedFilter;
+
 #pragma mark - Subclass These
 -(void) loadFilters;
 -(void) setUpCamera;

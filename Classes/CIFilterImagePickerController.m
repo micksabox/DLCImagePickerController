@@ -35,7 +35,7 @@
         ciContext = [CIContext contextWithOptions:nil];
     
     _staticImageView = [[UIImageView alloc] initWithFrame:self.imageView.bounds];
-    
+    _staticImageView.backgroundColor = [UIColor redColor];
     //We need to transform the image view because
 //    _staticImageView.transform = CGAffineTransformMakeRotation(M_PI/2);
     
@@ -453,14 +453,15 @@
 
 -(void)prepareLiveFilter{
   
-//    NSLog(@"prepare live filter");
+    NSLog(@"prepare live filter");
     
+    [_staticImageView removeFromSuperview];
     
 }
 
 -(void)prepareStaticFilter{
     
-//    NSLog(@"prepare static filter");
+    NSLog(@"prepare static filter");
     
     [session stopRunning];
     
@@ -523,23 +524,61 @@
 
 -(CGImageRef)createImageByPassingThroughCurrentFilter:(CIImage *)originalImage {
  
-    /*
-    //Okay, this is where we take the current filter, apply it to
-    CIFilter * posterize = [CIFilter filterWithName:@"CIColorPosterize"];
-    [posterize setDefaults];
-    [posterize setValue:@4 forKey:@"inputLevels"];
-    [posterize setValue:originalImage forKey:@"inputImage"];
-    */
+    //There are 10 filters
+    
+    CGImageRef  filteredImage = NULL;
     
     
-    CIFilter * colorMap = [CIFilter filterWithName:@"CIColorMap"];
-    [colorMap setValue:originalImage forKey:@"inputImage"];
+    if (self.selectedFilter == 0) {
+        
+        //Clear filter
+        filteredImage = [ciContext createCGImage:originalImage fromRect:[originalImage extent]];
+
+        
+        
+    }
+    else{
+        
+//        CIFilter * colorMap = [CIFilter filterWithName:@"CIColorMap"];
+//        [colorMap setValue:originalImage forKey:@"inputImage"];
+//        
+//        CIImage * ciMapImage = [CIImage imageWithCGImage:self.colorMapGradient.CGImage];
+//        [colorMap setValue:ciMapImage forKey:@"inputGradientImage"];
+
+     
+        //Use the selected filter as the input to some color filters
+        
+        NSInteger adjustedIndex = self.selectedFilter;
+        
+        NSInteger numOfFilters = 10;
+        
+        CGFloat hue = (CGFloat)adjustedIndex / (CGFloat)numOfFilters;
+        
+//        NSLog(@"self.selectedFilter = %d, hue is %f", self.selectedFilter, hue);
+
+        
+        UIColor * tempColor = [UIColor colorWithHue:hue
+                                         saturation:1.0
+                                         brightness:1.0
+                                              alpha:1.0];
+        
+        self.view.backgroundColor = tempColor;
+        
+        CIFilter * monochrome = [CIFilter filterWithName:@"CIColorMonochrome"];
+        [monochrome setDefaults];
+        
+        [monochrome setValue:originalImage forKey:@"inputImage"];
+        
+        CIColor * monoColor = [CIColor colorWithCGColor:tempColor.CGColor];
+        [monochrome setValue:monoColor forKey:@"inputColor"];
+        
+//        [monochrome setValue:@1 forKey:@"inputIntensity"];
+        
+        filteredImage = [ciContext createCGImage:monochrome.outputImage fromRect:[originalImage extent]];
+        
+    }
     
-    CIImage * ciMapImage = [CIImage imageWithCGImage:self.colorMapGradient.CGImage];
-    [colorMap setValue:ciMapImage forKey:@"inputGradientImage"];
     
-    //    result = colorMap.outputImage;
-    CGImageRef  filteredImage = [ciContext createCGImage:colorMap.outputImage fromRect:[originalImage extent]];
     
     return filteredImage;
     

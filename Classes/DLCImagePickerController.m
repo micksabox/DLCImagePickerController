@@ -14,7 +14,6 @@
 @implementation DLCImagePickerController {
     BOOL isStatic;
     BOOL hasBlur;
-    int selectedFilter;
 }
 
 @synthesize delegate,
@@ -32,7 +31,8 @@
     photoBar,
     topBar,
     blurOverlayView,
-    outputJPEGQuality;
+    outputJPEGQuality,
+    selectedFilter;
 
 -(id) init {
     self = [super initWithNibName:@"DLCImagePicker" bundle:nil];
@@ -168,7 +168,7 @@
     [sender setSelected:YES];
     [self removeAllTargets];
     
-    selectedFilter = sender.tag;
+    self.selectedFilter = sender.tag;
     [self setFilter:sender.tag];
     [self prepareFilter];
 }
