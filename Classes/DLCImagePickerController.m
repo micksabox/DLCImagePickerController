@@ -424,13 +424,19 @@
 //        
 //        UIImage *currentFilteredVideoFrame = [processUpTo imageFromCurrentlyProcessedOutputWithOrientation:staticPictureOriginalOrientation];
 
-        UIImage * currentImage = self.imageView.image;
+        UIImage * currentImage = [self finalProcessedImage];  //self.imageView.image;
         
         NSDictionary *info = [[NSDictionary alloc] initWithObjectsAndKeys:
                               UIImageJPEGRepresentation(currentImage, self.outputJPEGQuality), @"data", nil];
         
         [self.delegate imagePickerController:self didFinishPickingMediaWithInfo:info];
     }
+}
+
+-(UIImage *)finalProcessedImage{
+    
+ 
+    return self.imageView.image;
 }
 
 -(IBAction) retakePhoto:(UIButton *)button {

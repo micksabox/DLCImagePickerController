@@ -68,4 +68,10 @@
 -(void) prepareLiveFilter;
 -(void) prepareStaticFilter;
 -(void) showFilters;
+
+/*
+ The end result image, after all filters and processing have been applied. Subclasses can override this to provide their own version of the final image.
+ */
+-(UIImage *)finalProcessedImage;
+
 @end

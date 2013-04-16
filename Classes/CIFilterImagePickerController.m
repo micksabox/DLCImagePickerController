@@ -461,6 +461,11 @@
 
 }
 
+-(UIImage *)finalProcessedImage{
+ 
+   return self.staticImageView.image;
+}
+
 #pragma mark -
 
 -(void)setupColorWithPrimary:(UIColor *)primaryColor{
@@ -542,7 +547,7 @@
                                          brightness:1.0
                                               alpha:1.0];
         
-        self.view.backgroundColor = tempColor;
+
         
         CIFilter * monochrome = [CIFilter filterWithName:@"CIColorMonochrome"];
         [monochrome setDefaults];
