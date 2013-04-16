@@ -11,6 +11,13 @@
 
 #define kStaticBlurSize 2.0f
 
+@interface DLCImagePickerController ()
+
+//-(void)setFilterViewSelected:(UIView *)selectedView;
+//-(void)setFilterViewDeselected:(UIView *)deselectedView;
+
+@end
+
 @implementation DLCImagePickerController {
     BOOL isStatic;
     BOOL hasBlur;
@@ -99,6 +106,8 @@
         button.frame = CGRectMake(10+i*(60+10), 5.0f, 60.0f, 60.0f);
         button.layer.cornerRadius = 7.0f;
         
+        [button addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionNew context:NULL];
+        
         //use bezier path instead of maskToBounds on button.layer
         UIBezierPath *bi = [UIBezierPath bezierPathWithRoundedRect:button.bounds
                                                  byRoundingCorners:UIRectCornerAllCorners
@@ -116,7 +125,8 @@
                    action:@selector(filterClicked:)
          forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
-        [button setTitle:@"*" forState:UIControlStateSelected];
+//        [button setTitle:@"*" forState:UIControlStateSelected];
+        
         if(i == 0){
             [button setSelected:YES];
         }
@@ -739,5 +749,52 @@
 }
 
 #endif
+
+
+/*
+-(void)setFilterViewSelected:(UIView *)selectedView{
+
+    //Use Quartz to setup a pretty selection state for the given view
+    
+    selectedView.layer.borderColor = [UIColor blueColor].CGColor;
+    selectedView.layer.borderWidth = 2.0f;
+    
+}
+
+-(void)setFilterViewDeselected:(UIView *)deselectedView{
+    
+    deselectedView.layer.borderColor = NULL;
+    deselectedView.layer.borderWidth = 0;
+    
+}
+ */
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+ 
+    
+    if ([object isKindOfClass:[UIButton class]] && [keyPath isEqualToString:@"selected"]) {
+        
+        //Change the state of the button
+        
+        if ([change objectForKey:NSKeyValueChangeNewKey]) {
+            
+            BOOL buttonSelected = [[change objectForKey:NSKeyValueChangeNewKey] boolValue];
+            
+            UIButton * button = (UIButton *)object;
+            
+            if (buttonSelected) {
+               
+                button.layer.borderColor = [UIColor whiteColor].CGColor;
+                button.layer.borderWidth = 2.0;
+            }
+            else{
+                button.layer.borderColor = NULL;
+                button.layer.borderWidth = 0.0;
+            }
+        }
+    }
+    
+
+}
 
 @end

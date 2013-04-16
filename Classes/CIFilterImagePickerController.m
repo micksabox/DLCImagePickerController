@@ -433,7 +433,7 @@
 
 -(void)prepareLiveFilter{
   
-    NSLog(@"prepare live filter");
+//    NSLog(@"prepare live filter");
     
     [_staticImageView removeFromSuperview];
     
@@ -441,7 +441,7 @@
 
 -(void)prepareStaticFilter{
     
-    NSLog(@"prepare static filter");
+//    NSLog(@"prepare static filter");
     
     [session stopRunning];
     
