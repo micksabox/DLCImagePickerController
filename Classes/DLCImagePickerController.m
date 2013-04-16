@@ -13,9 +13,6 @@
 
 @interface DLCImagePickerController ()
 
-//-(void)setFilterViewSelected:(UIView *)selectedView;
-//-(void)setFilterViewDeselected:(UIView *)deselectedView;
-
 @end
 
 @implementation DLCImagePickerController {
@@ -84,11 +81,6 @@
     
     [self loadFilters];
     
-    //we need a crop filter for the live video
-//    cropFilter = [[GPUImageCropFilter alloc] initWithCropRegion:CGRectMake(0.0f, 0.0f, 1.0f, 0.75f)];
-//    
-//    filter = [[GPUImageFilter alloc] init];
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         [self setUpCamera];
     });
@@ -125,7 +117,6 @@
                    action:@selector(filterClicked:)
          forControlEvents:UIControlEventTouchUpInside];
         button.tag = i;
-//        [button setTitle:@"*" forState:UIControlStateSelected];
         
         if(i == 0){
             [button setSelected:YES];
@@ -687,17 +678,21 @@
 
 -(void) dealloc {
     [self removeAllTargets];
-//    stillCamera = nil;
-//    cropFilter = nil;
-//    filter = nil;
-//    blurFilter = nil;
-//    staticPicture = nil;
+
     self.blurOverlayView = nil;
     self.focusView = nil;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-//    [stillCamera stopCameraCapture];
+    
+    //You need to remove self as observer for buttons, else leak memory!
+    for(UIView *view in self.filterScrollView.subviews){
+        if([view isKindOfClass:[UIButton class]]){
+            
+            [view removeObserver:self forKeyPath:@"selected"];
+        }
+    }
+    
     [super viewWillDisappear:animated];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:NO];
 }
@@ -751,23 +746,6 @@
 #endif
 
 
-/*
--(void)setFilterViewSelected:(UIView *)selectedView{
-
-    //Use Quartz to setup a pretty selection state for the given view
-    
-    selectedView.layer.borderColor = [UIColor blueColor].CGColor;
-    selectedView.layer.borderWidth = 2.0f;
-    
-}
-
--(void)setFilterViewDeselected:(UIView *)deselectedView{
-    
-    deselectedView.layer.borderColor = NULL;
-    deselectedView.layer.borderWidth = 0;
-    
-}
- */
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
  
