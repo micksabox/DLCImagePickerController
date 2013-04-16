@@ -43,40 +43,14 @@
     session = [[AVCaptureSession alloc] init];
     session.sessionPreset = AVCaptureSessionPreset640x480;
 //    session.sessionPreset = AVCaptureSessionPresetMedium;
-    ;
     
-    UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc] initWithTarget:self
-                                                                           action:@selector(handlePanGestureRecognizer:)];
     
-    [self.view addGestureRecognizer:pan];
+    
+    
     
     [super viewDidLoad];
 }
 
--(void)handlePanGestureRecognizer:(UIPanGestureRecognizer *)panGesture{
-    
-    
-    
-    CGFloat hueLocation = [panGesture locationInView:self.view].x;
-    CGFloat saturation = [panGesture locationInView:self.view].y;
-    
-    CGFloat huePercentage = hueLocation / self.view.bounds.size.width;
-    CGFloat satPercentage = saturation / self.view.bounds.size.height;
-    
-//    huePercentage = 255 * huePercentage / 255;
-//    satPercentage =
-    
-//    NSLog(@"Pan detected at %f", huePercentage);
-
-    UIColor * newColor = [UIColor colorWithHue:huePercentage
-                                    saturation:satPercentage
-                                    brightness:1.0
-                                         alpha:1.0];
-    
-    self.view.backgroundColor = newColor;
-    
-    [self setupColorWithPrimary:newColor];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -444,6 +418,12 @@
 -(IBAction) retakePhoto:(UIButton *)button {
 
     [super retakePhoto:button];
+    
+    if([self.currentCaptureDevice hasTorch]){
+        [self.flashToggleButton setEnabled:YES];
+    }else{
+        [self.flashToggleButton setEnabled:NO];
+    }
     
     [videoLayer removeFromSuperlayer];
     [self.imageView.layer addSublayer:videoLayer];
